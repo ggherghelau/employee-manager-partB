@@ -41,6 +41,20 @@ class Department {
 
     updateEmployeeData(data){
     //  snippet # 8
+      const employees = this.getData()
+      const employee = employees.find(employee => employee.id === data.id)
+
+      const updatedEmployee = {...employee, ...data}
+      
+      const newEmployeeData = employees.map(employee =>{
+            if(employee.id === data.id){
+              return updatedEmployee
+            }else{
+              return employee
+            }
+      })
+      
+      this.writeData(newEmployeeData)
     }
 
   resetDepartmentData(){

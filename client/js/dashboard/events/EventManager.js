@@ -26,6 +26,7 @@ const EventManager = (function () {
   
       handle.addEventListener("deleteEmployee", onDeleteEmployee);
       // Snippet #3
+      handle.addEventListener("editEmployee",  onEditEmployee);
       handle.addEventListener("sideBarSelect",  onFetchRequest);
   
       return {
