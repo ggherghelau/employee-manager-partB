@@ -16,7 +16,7 @@ const EventManager = (function () {
   
       const onEditEmployee = async(e) => {
         // Snippet #4 create the url using the api module and call the dataFetcher edit employee funciton
-        const result = await dataFetcher.putRequest(api.updateEmployee(e.detail.payload.id), e.detail.payload)
+        const result = await dataFetcher.putRequest(api.updateEmployee, e.detail.payload)
       };
   
       const onFetchRequest = async (e) => {
